@@ -4,12 +4,12 @@ jobs:
  build:
    runs-on: ubuntu-latest
    steps:
-      - name: step1
+      - name: build step
         run: echo" hii hruthik"
 test:
     runs-on: ubuntu-latest
     steps: 
-      - name: step2
-        run: eho "nin nkn"
+      - name: test step
+        run: echo "nin nkn"
       
     
