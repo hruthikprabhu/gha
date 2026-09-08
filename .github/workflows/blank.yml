@@ -4,6 +4,5 @@ jobs:
   build:
      runs-on: ubuntu-latest
      steps:
-         - name: hello step
-           run: echo "hello ${{vars.gotilla}}"
- 
+         - name: checkout the code
+           run: actions/checkout@v4 
