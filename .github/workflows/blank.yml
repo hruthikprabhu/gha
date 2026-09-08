@@ -1,8 +1,10 @@
-name: hello world
-on : push
+name: demo action
+on: push
 jobs:
-  build:
-     runs-on: ubuntu-latest
-     steps:
-         - name: checkout the code
-           uses: : actions/checkout@v4 
+  action-demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout the code
+        uses: actions/checkout@v4
+      - name: print the index.html
+        run: cat index.html
