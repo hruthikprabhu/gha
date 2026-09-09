@@ -1,13 +1,13 @@
 name: demo of inputs
-on: 
- workflow_dispatch:
-   inputs:
-     environment:
-       description: this is the demo  of inputs'
-       required: true
-       default: dev
- jobs:
-  build:
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'this is the demo of inputs'
+        required: true
+        default: 'dev'
+jobs:
+  dev:
     runs-on: ubuntu-latest
     steps:
       - name: hello step
