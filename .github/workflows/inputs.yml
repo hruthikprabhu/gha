@@ -1,14 +1,22 @@
-name: demo of inputs
+name: inputs-demo
 on:
   workflow_dispatch:
     inputs:
       environment:
-        description: 'this is the demo of inputs'
+        description: chose the environment to deploy
         required: true
-        default: 'dev'
+        default: dev
+        type: choice
+        options:
+          - dev
+          - staging
+          - prod
+      artifact_tag:
+        description: chose the version of the artifact to be deployed
+        required: true
 jobs:
-  dev:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: hello step
-        run: echo "hello ${{ inputs.environment }}"
+      - name: demo of inputs
+        run: echo "the environment is ${{ inputs.environment }} and the artifact tag is ${{ inputs.artifact_tag }}"
