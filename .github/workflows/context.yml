@@ -7,4 +7,4 @@ jobs:
    - name: print the repo of the file and also know the user_name of this repo
      run: |
       echo "this file i from the this ${{ github.repository}} repo"
-      echo "the username of this repo is ${{github.event_name}}"
+      echo "the username of this repo is ${{github.actor}}"
