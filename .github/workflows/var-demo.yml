@@ -1,0 +1,11 @@
+name: demo of env
+on: workflow_dispatch
+env:
+ app_env: "dev"
+jobs:
+  env-demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checking thr env variables
+        run: echo "sow the env word $app_env "
+  
