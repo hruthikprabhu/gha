@@ -3,9 +3,12 @@ on: workflow_dispatch
 env:
  app_env: "dev"
 jobs:
-  env-demo:
-    runs-on: ubuntu-latest
-    steps:
-      - name: checking thr env variables
-        run: echo "sow the env word $app_env "
+  env_demo:
+   env:
+    app_env: "test"
+   runs-on: ubuubuntu-latest
+   steps:
+     - name: connecting to variables
+       run: echo "hii this from $app_env department"
+    
   
