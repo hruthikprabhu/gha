@@ -1,0 +1,8 @@
+name: demo-context
+on: push
+jobs:
+ test:
+  runs-on: ubuntu-latest
+  steps:
+   - name: print the repo of the file
+     run: echo "this file i from the this ${{ github.repository}} repo"
